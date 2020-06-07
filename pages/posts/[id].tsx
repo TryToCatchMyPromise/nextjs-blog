@@ -15,7 +15,7 @@ export default function Post({
         contentHtml: string,
     }
 }) {
-
+debugger;
     return (
         <Layout>
             <Head>
