@@ -1,0 +1,18 @@
+.tableTitleContainer {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid blue;
+}
+
+.titleItem {
+    display: flex;
+    flex: 1 1;
+}
+
+.titleItem:nth-child(1) {
+    justify-content: flex-end;
+}
+
+.titleItem:nth-child(2) {
+    justify-content: flex-start;
+}
