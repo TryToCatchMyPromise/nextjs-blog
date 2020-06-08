@@ -2,6 +2,8 @@ import React from "react";
 import classes from "./AxesPro.module.css";
 import AxesProTableTitle from "../../components/AxesProTableTitle";
 import {GetStaticProps} from "next";
+import AxesProPath from "../../components/AxesProPath";
+import AxesProSection from "../../components/AxesProSection";
 
 const AxesPro =
     ({
@@ -9,30 +11,50 @@ const AxesPro =
          collection,
      }: {
         title: [{
-           titleProperty: string,
-           titleValue: string,
+            titleProperty: string,
+            titleValue: string,
         }],
-        collection: [{
-            property: string,
-            value: string,
-        }],
+        collection: [
+            {
+                section: [
+                    {
+                        mainProperty: string,
+                        property: string,
+                        value: string,
+                    }
+                ]
+            },
+        ],
     }) => {
 
         return (
             <>
+                <AxesProPath/>
                 <div className={classes.container}>
-                    <AxesProTableTitle title = {title}/>
-                    <div className={classes.gg}>{collection.map(
-                        (s) => {
-                            return (
-                                <>
-                                    <div>{s.property}</div>
-                                    <div>{s.value}</div>
-                                </>
-                            )
-                        }
-                    )}
+                    <AxesProTableTitle title={title}/>
+                    <div>{collection.map((s) => {
+                        return (
+                            <AxesProSection section={s.section}/>
+                        )
+                    })}
+
                     </div>
+                    {/*<AxesProSection section={collection.section}/>*/}
+
+                    {/*<div className={classes.gg}>{collection.section.map(*/}
+                    {/*    (s) => {*/}
+                    {/*        return (*/}
+                    {/*            <>*/}
+                    {/*                <div>{s.mainProperty}</div>*/}
+                    {/*                <div>{s.property}</div>*/}
+                    {/*                <div>{s.value}</div>*/}
+                    {/*            </>*/}
+                    {/*        )*/}
+                    {/*    }*/}
+                    {/*)}*/}
+                    {/*</div>*/}
+
+
                     <div>
                         {/*    {collection.map(*/}
                         {/*    (s, index, array) => {*/}
@@ -68,22 +90,78 @@ export default AxesPro;
 export const getStaticProps: GetStaticProps = async () => {
     const collection = [
         {
-            property: "Документ",
-            value: "Профиль требований к должности"
+            section: [
+                {
+                    mainProperty: "Общая информация",
+                },
+                {
+                    property: "Документ",
+                    value: "Профиль требований к должности"
+                },
+                {
+                    property: "Должность",
+                    value: "Инженер"
+                },
+                {
+                    property: "Функциональное направление",
+                    value: "Логистика"
+                },
+                {
+                    property: "Специализация",
+                    value: "Обслуживание и ремонт механического, энергетического и электрооборудования"
+                }
+            ]
         },
         {
-            property: "Должность",
-            value: "Инженер"
+            section: [
+                {
+                    mainProperty: "Образование",
+                },
+                {
+                    property: "Степень",
+                    value: "Высшее/Среднее высшее",
+                },
+                {
+                    property: "Специализация",
+                    value: "Инженерно-техническая",
+                },
+            ]
         },
         {
-            property: "Функциональное направление",
-            value: "Логистика"
-        },
-        {
-            property: "Специализация",
-            value: "Обслуживание и ремонт механического, энергетического и электрооборудования"
+            section: [
+                {
+                    mainProperty: "Корпоративные компетенции",
+                },
+                {
+                    property: "Сотрудничество",
+                    value: "1",
+                },
+                {
+                    property: "Коммуникации и убеждения",
+                    value: "2",
+                },
+                {
+                    property: "Достижение результата",
+                    value: "3",
+                },
+                {
+                    property: "Системное мышление",
+                    value: "3",
+                },
+                {
+                    property: "Культура безопасности",
+                    value: "2",
+                },
+                {
+                    property: "Сотрудничество",
+                    value: "1",
+                },
+            ]
         }
+
     ];
+
+
 
     const title = [{
         titleProperty: "Свойство",

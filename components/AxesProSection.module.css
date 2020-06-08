@@ -1,0 +1,75 @@
+.section {
+    margin: 50px 0 50px 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*justify-content: center;*/
+}
+
+.headerChild {
+    display: contents;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    flex: 10 10;
+}
+
+.left {
+    justify-content: flex-end;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.right {
+    justify-content: flex-start;
+    padding-left: 20px;
+    text-align: left;
+    /*border-left: 1px solid gray;*/
+}
+
+.mainProperty {
+font-weight: bold;
+}
+
+.deadZone {
+
+}
+
+.body {
+
+}
+
+.bodyLine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0 5px 0;
+}
+
+.lineContainer {
+    display: flex;
+    align-self: stretch;
+    /*flex: 1 1;*/
+    width: 10px;
+    /*height: 100%;*/
+    overflow: hidden;
+
+    /*height: 10px;*/
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+/*.rightOverlay {*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    border-left: 1px solid grey;*/
+/*}*/
+/*.line {*/
+/*    height: 100%;*/
+/*    padding-top: 100%;*/
+/*}*/
