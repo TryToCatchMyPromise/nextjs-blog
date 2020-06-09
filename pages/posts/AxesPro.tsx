@@ -134,7 +134,7 @@ export const getStaticProps: GetStaticProps = async () => {
                 },
                 {
                     property: "Сотрудничество",
-                    value: "1",
+                    value: "Обслуживание и ремонт механического, энергетического и электрооборудования",
                 },
                 {
                     property: "Коммуникации и убеждения",
@@ -142,7 +142,7 @@ export const getStaticProps: GetStaticProps = async () => {
                 },
                 {
                     property: "Достижение результата",
-                    value: "3",
+                    value: "Обслуживание и ремонт механического, энергетического и электрооборудования",
                 },
                 {
                     property: "Системное мышление",
@@ -154,7 +154,7 @@ export const getStaticProps: GetStaticProps = async () => {
                 },
                 {
                     property: "Сотрудничество",
-                    value: "1",
+                    value: "Обслуживание и ремонт механического, энергетического и электрооборудования",
                 },
             ]
         }

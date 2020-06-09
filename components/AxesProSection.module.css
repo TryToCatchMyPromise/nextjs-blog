@@ -16,20 +16,37 @@
 .item {
     display: flex;
     align-items: center;
-    flex: 10 10;
+    /*flex: 10 10;*/
+}
+
+.bodyLine {
+    /*position: relative;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+    /*box-sizing: content-box;*/
+    /*flex-flow: row wrap;*/
 }
 
 .left {
     justify-content: flex-end;
-    padding-right: 20px;
+    /*padding-right: 20px;*/
     text-align: right;
+    padding: 5px 20px 5px 0;
+    flex: 1 0;
+    white-space: nowrap;
 }
 
 .right {
+    position: relative;
     justify-content: flex-start;
-    padding-left: 20px;
+    /*padding-left: 20px;*/
     text-align: left;
+    padding: 5px 0 5px 20px;
     /*border-left: 1px solid gray;*/
+    flex: 1 0
+;
 }
 
 .mainProperty {
@@ -44,31 +61,37 @@ font-weight: bold;
 
 }
 
-.bodyLine {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 5px 0 5px 0;
-}
+
 
 .lineContainer {
+    /*position: absolute;*/
+    /*top: -10%;*/
     display: flex;
     align-self: stretch;
     /*flex: 1 1;*/
     width: 10px;
     /*height: 100%;*/
     overflow: hidden;
-
+/*padding-bottom: 2em;*/
     /*height: 10px;*/
-    border-left: 1px solid gray;
-    border-bottom: 1px solid gray;
+    /*border-left: 1px solid gray;*/
+    /*border-bottom: 1px solid gray;*/
+    /*border-top: 1px solid gray;*/
 }
 
-/*.rightOverlay {*/
-/*    height: 100%;*/
-/*    width: 100%;*/
-/*    border-left: 1px solid grey;*/
-/*}*/
+.rightOverlay {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid grey;
+    top: -10px;
+    left: -5px;
+}
+
+.bodyLine:last-child .right .rightOverlay {
+    top: -50%;
+}
 /*.line {*/
 /*    height: 100%;*/
 /*    padding-top: 100%;*/
