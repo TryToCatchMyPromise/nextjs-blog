@@ -80,6 +80,10 @@ const AxesPro =
                         {/*    }*/}
                         {/*)}*/}
                     </div>
+                    <div className={classes.testContainer}>
+                        <div className={classes.left}>1</div>
+                        <div className={classes.right}>2</div>
+                    </div>
                 </div>
             </>
         )

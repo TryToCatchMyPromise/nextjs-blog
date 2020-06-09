@@ -40,11 +40,13 @@ const AxesProSection = ({
                         return (
                             <div className={classes.bodyLine}>
                                 <div className={classes.left + " " + classes.item}>{p.property}</div>
-                                <div className={classes.lineContainer}>
-                                    <div className={classes.line}></div>
-                                </div>
+                                {/*<div className={classes.lineContainer}>*/}
+                                {/*    <div className={classes.line}></div>*/}
+                                {/*</div>*/}
                                 <div className={classes.right + " " + classes.item}>{p.value}
-                                <div className={classes.rightOverlay}></div>
+                                <div className={classes.rightOverlay}>
+                                    <div className={classes.stick}></div>
+                                </div>
                                 </div>
                             </div>
                         )
