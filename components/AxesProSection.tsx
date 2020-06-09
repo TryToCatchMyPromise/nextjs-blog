@@ -25,7 +25,11 @@ const AxesProSection = ({
                                 <div className={classes.mainProperty + " " + classes.left + " " + classes.item}>{s.mainProperty}</div>
                                 {/*<div className={classes.lineContainer}>*/}
                                 <div>
-                                    <div className={classes.button}></div>
+                                    <div className={classes.button}>
+                                        <div className={classes.buttonStick + " " + classes.Hor}></div>
+                                        <div className={classes.buttonStick + " " + classes.Ver}></div>
+
+                                    </div>
                                 </div>
                                 <div className={classes.deadZone + " " + classes.right + " " + classes.item}></div>
                             </div>
